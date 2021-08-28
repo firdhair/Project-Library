@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #2c2c2c;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4,
+h5 {
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #2c2c2c;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f1e4cf;
+}
+
+.both-sides {
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
+}
+
+.left-side h1 {
+  font-family: "Fjalla One", cursive;
+  color: #4a3435;
+  margin: 5rem 0rem;
+  font-size: 4rem;
+}
+
+.left-side input[type="text"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.3rem 0rem;
+  padding: 1rem 2.7rem;
+  border: none;
+  border-radius: 2rem;
+  font-family: "Montserrat";
+  color: #29170e;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #f9f3ee;
+  -webkit-appearance: none;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 2.5rem;
+  background-color: #f9f3ee;
+}
+
+.left-side input[type="text"]:nth-child(3) {
+  margin: 0rem 0rem;
+}
+
+.left-side input[type="checkbox"] {
+  font-size: 1rem;
+  color: #29170e;
+  cursor: pointer;
+  outline: 1px solid white;
+  margin: 0rem 0.5rem 2rem 0rem;
+}
+
+.left-side span {
+  font-size: 1.8rem;
+  color: #754234;
+  cursor: pointer;
+}
+
+.left-side button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+  font-family: "Montserrat";
+  background-color: #643741;
+  color: #eeeeee;
+  padding: 0.5rem 10.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.library-image {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dad8dd), to(#dad1d4));
+  background: linear-gradient(#dad8dd, #dad1d4);
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 75rem;
+          flex: 2 1 75rem;
+}
+
+.library-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=style.css.map */
