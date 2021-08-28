@@ -51,7 +51,7 @@ a {
 
 body {
   min-height: 100vh;
-  background-color: #f1e4cf;
+  background-color: #e7e7e7;
 }
 
 .both-sides {
@@ -84,7 +84,7 @@ body {
 
 .left-side h1 {
   font-family: "Fjalla One", cursive;
-  color: #4a3435;
+  color: #3a2a51;
   margin: 5rem 0rem;
   font-size: 4rem;
 }
@@ -107,7 +107,6 @@ body {
   color: #29170e;
   font-size: 2rem;
   text-align: center;
-  background-color: #f9f3ee;
   -webkit-appearance: none;
   -moz-border-radius: 1rem;
   -webkit-border-radius: 2.5rem;
@@ -120,7 +119,7 @@ body {
 
 .left-side input[type="checkbox"] {
   font-size: 1rem;
-  color: #29170e;
+  color: #3a2a51;
   cursor: pointer;
   outline: 1px solid white;
   margin: 0rem 0.5rem 2rem 0rem;
@@ -128,7 +127,7 @@ body {
 
 .left-side span {
   font-size: 1.8rem;
-  color: #754234;
+  color: #3a2a51;
   cursor: pointer;
 }
 
@@ -139,14 +138,17 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 5rem;
   font-family: "Montserrat";
-  background-color: #643741;
+  background-color: #3a2a51;
   color: #eeeeee;
-  padding: 0.5rem 10.5rem;
+  padding: 0.5rem 10rem;
   border-radius: 2rem;
   border: none;
   cursor: pointer;
+  text-align: center;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
 }
 
 .library-image {
@@ -163,5 +165,89 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+h2 {
+  font-family: "Fjalla One", cursive;
+  font-size: 3rem;
+  color: #3a2a51;
+  margin-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.library-list {
+  min-height: 70vh;
+  background-color: #eeeeee;
+  width: 85%;
+  margin: auto;
+  border-radius: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  -webkit-box-shadow: rgba(87, 87, 87, 0.05) 0 6px 9px 0;
+          box-shadow: rgba(87, 87, 87, 0.05) 0 6px 9px 0;
+}
+
+.books {
+  width: 90%;
+  border-collapse: collapse;
+  margin: auto;
+  font-family: "Montserrat";
+}
+
+.books th,
+.books td {
+  padding: 0.5em;
+}
+
+.book-desc {
+  margin-bottom: 10rem;
+  background-color: #3a2a51;
+}
+
+.book-desc th {
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  margin-right: 1rem;
+}
+
+.book-desc th:first-child {
+  border-radius: 2.5rem 0 0 2.5rem;
+}
+
+.book-desc th:last-child {
+  border-radius: 0rem 2.5rem 2.5rem 0rem;
+}
+
+.books-info td {
+  font-family: "Montserrat";
+  font-size: 2rem;
+  text-align: center;
+}
+
+.books-info td:first-child {
+  border-radius: 2.5rem 0 0 2.5rem;
+}
+
+.books-info td:last-child {
+  border-radius: 0rem 2.5rem 2.5rem 0rem;
+}
+
+.books-info:hover {
+  background-color: #f9f9fb;
+  border-top-left-radius: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
