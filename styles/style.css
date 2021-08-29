@@ -151,6 +151,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.left-side button:hover {
+  background-color: #342647;
+}
+
 .library-image {
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(#dad8dd), to(#dad1d4));
@@ -209,6 +213,7 @@ h2 {
 .books th,
 .books td {
   padding: 0.5em;
+  max-width: 3rem;
 }
 
 .book-desc {
@@ -247,7 +252,7 @@ h2 {
 }
 
 .books-info:hover {
-  background-color: #f9f9fb;
+  background-color: #e7e7e7;
   border-top-left-radius: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

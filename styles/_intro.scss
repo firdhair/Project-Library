@@ -67,6 +67,9 @@ body {
     margin-top: 5rem;
     margin-bottom: 8rem;
   }
+  button:hover {
+    background-color: #342647;
+  }
 }
 
 .library-image {
@@ -109,7 +112,9 @@ h2 {
   td {
     //text-align: left;
     padding: 0.5em;
-    //max-width: 3rem;
+    max-width: 3rem;
+    // max-width: 2rem;
+    // flex-wrap: wrap;
   }
 }
 
@@ -147,6 +152,6 @@ h2 {
 }
 
 .books-info:hover {
-  background-color: #f9f9fb;
+  background-color: #e7e7e7;
   border-top-left-radius: 1rem;
 }
