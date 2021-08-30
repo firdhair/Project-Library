@@ -41,6 +41,14 @@
       href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
       rel="stylesheet"
     />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+  />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
@@ -51,22 +59,18 @@
           <input
             type="text"
             placeholder="Title of The Book"
-            class="book-title" required
+            class="book-title" required="true"
           />
           <input
             type="text"
             placeholder="Author of The Book"
             class="book-author" required
-          />
-          <input
-            type="text"
-            placeholder="Pages of The Book"
-            class="book-pages" required
-          />
+          >
+          <input type="text" placeholder="Pages of The Book" class="book-pages" required/>
           <br />
           <!-- <input type="checkbox" class="read" name="read" value="read" />Read -->
           <label class="checkbox">
-            <input type="checkbox" value="read" name="checkbox" required/>
+            <input type="checkbox" id="read" value="read" name="read"/>
             <span>I have read this book</span>
           </label>
           <br />
@@ -135,21 +139,26 @@
         <td></td>
       </tr>
       <tr class="books-info">
-        <td>1</td>
-        <td>some data</td>
-        <td>other data</td>
-        <td>ye?</td>
-        <td>nay?</td>
+        <td>Wuthering Heights</td>
+        <td>Emily Bronte</td>
+        <td>260</td>
+        <td>
+          <i class="fas fa-times complete-btn" id="complete-btn"></i>
+        </td>
+        <td>
+          <i class="fas fa-trash trash-btn" id="trash-btn"></i>
+        </td>
       </tr>
       <tr class="books-info">
-        <td>1</td>
-        <td>some data</td>
-        <td>other data</td>
-        <td>ye?</td>
-        <td>nay?</td>
+        <td>Jane Eyre</td>
+        <td>Charlotte Bronte</td>
+        <td>480</td>
+        <td><i class="fas fa-times complete-btn" id="complete-btn"></i></td>
+        <td><i class="fas fa-trash trash-btn"  id="trash-btn"></i></td>
       </tr>
     </div>
 
     <script src="./library.js"></script>
   </body>
 </html>
+
