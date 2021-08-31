@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2.3rem 0rem;
+    margin: 1rem 0rem 0rem 0rem;
     padding: 1rem 2.7rem;
     border: none;
     border-radius: 2rem;
@@ -30,16 +30,15 @@ body {
     color: #29170e;
     font-size: 2rem;
     text-align: center;
-
     -webkit-appearance: none;
     -moz-border-radius: 1rem;
     -webkit-border-radius: 2.5rem;
     background-color: #f9f3ee;
   }
 
-  input[type="text"]:nth-child(3) {
-    margin: 0rem 0rem;
-  }
+  // input[type="text"]:nth-child(3) {
+  //   margin: 0rem 0rem;
+  // }
   input[type="checkbox"] {
     font-size: 1rem;
     color: #3a2a51;
@@ -175,4 +174,33 @@ h2 {
   border: none;
   font-size: 2rem;
   cursor: pointer;
+  .completed-btn:hover {
+    background-color: #e7e7e7;
+  }
+}
+
+.validation {
+  p {
+    opacity: 0;
+    font-size: 1.2rem;
+    margin: 0rem 0rem;
+  }
+}
+
+#title-text,
+#author-text,
+#pages-text {
+  opacity: 1;
+  font-family: "Montserrat";
+  color: #ff7a81;
+  font-size: 1.5rem;
+  margin: 0.5rem 0rem 2rem 0.8rem;
+}
+
+#title-text-checked,
+#author-text-checked,
+#pages-text-checked {
+  opacity: 0;
+  font-size: 1.2rem;
+  margin: 0rem 0rem;
 }

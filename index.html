@@ -56,17 +56,28 @@
       <div class="left-side">
         <h1 class="icon">Library</h1>
         <form>
-          <input
+          <input id="title"
             type="text"
             placeholder="Title of The Book"
             class="book-title" required="true"
           />
-          <input
+          <div class="validation">
+            <p class="validationBook">Please fill the book's title</p>
+          </div>
+
+          <input id="author"
             type="text"
             placeholder="Author of The Book"
             class="book-author" required
           >
-          <input type="text" placeholder="Pages of The Book" class="book-pages" required/>
+          <div class="validation">
+            <p class="validationAuthor">Please fill the book's author</p>
+          </div>
+          
+          <input id="pages" type="text" placeholder="Pages of The Book" class="book-pages" required/>
+          <div class="validation">
+            <p class="validationPages">Please enter a number bigger than 0.</p>
+          </div>
           <br />
           <!-- <input type="checkbox" class="read" name="read" value="read" />Read -->
           <label class="checkbox">
@@ -125,7 +136,7 @@
         <th></th>
       </tr>
       <tr class="book-desc">
-        <th>Title</th>
+        <th id="tes123">Title</th>
         <th>Author</th>
         <th>Pages</th>
         <th>Status</th>
