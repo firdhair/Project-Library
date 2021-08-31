@@ -74,7 +74,7 @@
             <p class="validationAuthor">Please fill the book's author</p>
           </div>
           
-          <input id="pages" type="text" placeholder="Pages of The Book" class="book-pages" required/>
+          <input id="pages" type="number" placeholder="Pages of The Book" class="book-pages" required/>
           <div class="validation">
             <p class="validationPages">Please enter a number bigger than 0.</p>
           </div>
@@ -98,6 +98,11 @@
     </div>
 
     <h2>Books Information</h2>
+    <div class="books-total">
+      <p class="read-books">Books read: </p>
+        <p class="unread-books">Books unread:</p>
+        <p class="all-books">Total books:</p>
+    </div>
     <div class="library-list">
       <!--<table id="library-info">
         <thead class="books-info">
@@ -153,19 +158,17 @@
         <td>Wuthering Heights</td>
         <td>Emily Bronte</td>
         <td>260</td>
-        <td>
-          <i class="fas fa-times complete-btn" id="complete-btn"></i>
+        <td><button class="fas fa-times complete-btn"></button>
         </td>
-        <td>
-          <i class="fas fa-trash trash-btn" id="trash-btn"></i>
-        </td>
+        <td><button class="fas fa-trash trash-btn"></button></td>
       </tr>
       <tr class="books-info">
         <td>Jane Eyre</td>
         <td>Charlotte Bronte</td>
         <td>480</td>
-        <td><i class="fas fa-times complete-btn" id="complete-btn"></i></td>
-        <td><i class="fas fa-trash trash-btn"  id="trash-btn"></i></td>
+        <td><button class="fas fa-times complete-btn"></button>
+        </td>
+        <td><button class="fas fa-trash trash-btn"></button></td>
       </tr>
     </div>
 

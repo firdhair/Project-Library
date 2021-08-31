@@ -52,6 +52,7 @@ a {
 body {
   min-height: 100vh;
   background-color: #e7e7e7;
+  font-family: "Montserrat";
 }
 
 .both-sides {
@@ -89,7 +90,8 @@ body {
   font-size: 4rem;
 }
 
-.left-side input[type="text"] {
+.left-side input[type="text"],
+.left-side input[type="number"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,13 +189,36 @@ h2 {
           flex-direction: row;
 }
 
+.books-total {
+  min-height: 12vh;
+  width: 85%;
+  margin: auto;
+  background-color: #eeeeee;
+  border-radius: 2.5rem;
+  margin-top: 5rem;
+  -webkit-box-shadow: rgba(87, 87, 87, 0.05) 0 6px 9px 0;
+          box-shadow: rgba(87, 87, 87, 0.05) 0 6px 9px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.books-total p {
+  margin: 2rem 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+}
+
 .library-list {
   min-height: 70vh;
   background-color: #eeeeee;
   width: 85%;
   margin: auto;
-  border-radius: 4rem;
-  margin-top: 4rem;
+  border-radius: 3.5rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
   -webkit-box-shadow: rgba(87, 87, 87, 0.05) 0 6px 9px 0;
           box-shadow: rgba(87, 87, 87, 0.05) 0 6px 9px 0;
