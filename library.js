@@ -18,11 +18,13 @@ const unreadBooks = document.querySelector(".unread-books");
 const allBooks = document.querySelector(".all-books");
 
 let myLibrary = [];
+let myLibraryAll = [];
 
 let totalBook = 2;
 let hasRead = 0;
 let unRead = 2;
 
+document.addEventListener("DOMContentLoaded", getBooks); // run getBooks if everything loads up
 addButton.addEventListener("click", addBookToLibrary);
 tableBooks.addEventListener("click", bookSetting);
 
@@ -45,6 +47,9 @@ function addBookToLibrary(event) {
   } else {
     myLibrary.push(bookTitle.value, bookAuthor.value, bookPages.value);
     console.log(myLibrary);
+    myLibraryAll.push(bookTitle.value, bookAuthor.value, bookPages.value);
+    saveLocalBooks(myLibrary);
+    console.log(myLibraryAll);
 
     // create new tr
     const newTr = document.createElement("tr");
@@ -132,6 +137,7 @@ function bookSetting(event) {
   if (item.classList[2] === "trash-btn") {
     const book = item.parentNode.parentNode;
     book.remove();
+    removeLocalBooks(book);
     const bookChild = book.children[3].childNodes[0];
     console.log(bookChild);
 
@@ -177,5 +183,88 @@ function showCase() {
   readBooks.innerHTML = "Books read: " + hasRead;
   unreadBooks.innerHTML = "Books unread: " + unRead;
   allBooks.innerHTML = "Total Book: " + totalBook;
-  console.log(totalBook);
+  //console.log(totalBook);
+}
+
+function saveLocalBooks(book) {
+  console.log("localStorage: " + book);
+  let books;
+  if (localStorage.getItem("books") === null) {
+    books = [];
+  } else {
+    books = JSON.parse(localStorage.getItem("books"));
+  }
+  books.push(book);
+  localStorage.setItem("books", JSON.stringify(books));
+}
+
+function getBooks() {
+  let books;
+  if (localStorage.getItem("books") === null) {
+    books = [];
+  } else {
+    // assumes the local storage isnt empty, take the data back and then parse into an array
+    books = JSON.parse(localStorage.getItem("books"));
+  }
+  books.forEach(function (book) {
+    // create new tr
+    const newTr = document.createElement("tr");
+    newTr.classList.add("books-info");
+    tableBooks.appendChild(newTr);
+
+    // create new td, complete button, and delete button
+    let newTd;
+    for (let i = 0; i < book.length; i++) {
+      newTd = document.createElement("td");
+      newTd.innerText = book[i];
+      newTr.appendChild(newTd);
+    }
+
+    // Create mark button
+    if (bookStatus.checked) {
+      newTd = document.createElement("td");
+      const completedButton = document.createElement("button");
+      completedButton.setAttribute("class", "fas fa-check completed-btn");
+      completedButton.setAttribute("id", "completed-btn");
+      newTd.appendChild(completedButton);
+      newTr.appendChild(newTd);
+      hasRead++;
+      totalBook++;
+      showCase();
+    } else {
+      newTd = document.createElement("td");
+      const completedButton = document.createElement("button");
+      completedButton.setAttribute("class", "fas fa-times complete-btn");
+      //completedButton.setAttribute("id", "complete-btn");
+      newTd.appendChild(completedButton);
+      newTr.appendChild(newTd);
+      unRead++;
+      totalBook++;
+      showCase();
+    }
+
+    //Create Delete Button
+    newTd = document.createElement("td");
+    const deleteButton = document.createElement("button");
+    deleteButton.setAttribute("class", "fas fa-trash trash-btn");
+    //deleteButton.setAttribute("id", "trash-btn");
+    newTd.appendChild(deleteButton);
+    newTr.appendChild(newTd);
+  });
+}
+
+function removeLocalBooks(book) {
+  let books;
+
+  // if the local storage is null then an empty array will be created
+  if (localStorage.getItem("books") === null) {
+    books = [];
+  } else {
+    // assumes the local storage isnt empty, take the data back and then parse into an array
+    books = JSON.parse(localStorage.getItem("books"));
+  }
+  const bookIndex = book.children[0].innerText; // todo.children[0] is the ul inside the div
+  books.splice(books.indexOf(bookIndex), 1);
+  console.log(book.children);
+  localStorage.setItem("books", JSON.stringify(books));
 }

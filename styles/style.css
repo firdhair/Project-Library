@@ -279,7 +279,8 @@ h2 {
 }
 
 .books-info:hover .trash-btn,
-.books-info:hover .complete-btn {
+.books-info:hover .complete-btn,
+.books-info:hover .completed-btn {
   background-color: #e7e7e7;
 }
 
